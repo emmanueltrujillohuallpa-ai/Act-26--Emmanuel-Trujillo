@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 01</title>
+</head>
+
+<body>
+
+    <p id="texto">Texto inicial</p>
+
+    <button onclick="modificarTexto()">Modificar texto</button>
+
+    <script>
+        function modificarTexto() {
+            let parrafo = document.getElementById("texto");
+            parrafo.textContent = "El texto ha sido modificado con JavaScript";
+        }
+    </script>
+
+</body>
+
+</html>

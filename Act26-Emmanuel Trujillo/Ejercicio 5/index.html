@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 05</title>
+</head>
+
+<body>
+
+    <h1>Control de Temperatura</h1>
+
+    <input type="text" id="temperatura" placeholder="Ingrese temperatura">
+
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+
+            let temperatura = Number(document.getElementById("temperatura").value);
+            let resultado = document.getElementById("resultado");
+
+            console.log("Verificación realizada: " + new Date());
+
+            if (temperatura < 10) {
+                resultado.textContent = "Hace frío";
+                resultado.style.color = "blue";
+            }
+            else if (temperatura >= 10 && temperatura <= 25) {
+                resultado.textContent = "Clima agradable";
+                resultado.style.color = "green";
+            }
+            else {
+                resultado.textContent = "Hace calor";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

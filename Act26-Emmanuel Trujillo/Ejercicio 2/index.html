@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 02</title>
+</head>
+
+<body>
+
+    <ul id="lista">
+    </ul>
+
+    <button onclick="agregarElemento()">Agregar elemento</button>
+
+    <script>
+        function agregarElemento() {
+            let nuevoElemento = document.createElement("li");
+
+            nuevoElemento.textContent = "Nuevo Elemento";
+
+            let lista = document.getElementById("lista");
+
+            lista.appendChild(nuevoElemento);
+
+            alert("Se ha añadido un nuevo elemento");
+        }
+    </script>
+
+</body>
+
+</html>

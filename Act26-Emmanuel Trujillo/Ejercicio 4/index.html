@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 04</title>
+</head>
+
+<body>
+
+    <input type="text" id="producto" placeholder="Ingrese un producto">
+
+    <button onclick="agregarProducto()">Agregar</button>
+
+    <ul id="lista">
+    </ul>
+
+    <script>
+        function mostrarCantidad() {
+            let lista = document.getElementById("lista");
+            console.log("Cantidad de productos: " + lista.children.length);
+        }
+
+        function agregarProducto() {
+
+            let texto = document.getElementById("producto").value;
+
+            if (texto != "") {
+
+                let nuevoProducto = document.createElement("li");
+
+                nuevoProducto.textContent = texto;
+
+                nuevoProducto.onclick = function () {
+                    nuevoProducto.remove();
+                    mostrarCantidad();
+                };
+
+                let lista = document.getElementById("lista");
+
+                lista.appendChild(nuevoProducto);
+
+                document.getElementById("producto").value = "";
+
+                mostrarCantidad();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

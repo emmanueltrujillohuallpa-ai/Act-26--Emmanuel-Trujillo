@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 03</title>
+</head>
+
+<body>
+
+    <h1>Votación</h1>
+
+    <button onclick="votar(1)">Candidato 1</button>
+    <button onclick="votar(2)">Candidato 2</button>
+    <button onclick="votar(3)">Candidato 3</button>
+
+    <p>Candidato 1: <span id="votos1">0</span> votos</p>
+    <p>Candidato 2: <span id="votos2">0</span> votos</p>
+    <p>Candidato 3: <span id="votos3">0</span> votos</p>
+
+    <script>
+        let votos1 = 0;
+        let votos2 = 0;
+        let votos3 = 0;
+
+        function votar(candidato) {
+
+            if (candidato == 1) {
+                votos1++;
+                document.getElementById("votos1").textContent = votos1;
+                console.log("Votó el Candidato 1");
+            }
+
+            if (candidato == 2) {
+                votos2++;
+                document.getElementById("votos2").textContent = votos2;
+                console.log("Votó el Candidato 2");
+            }
+
+            if (candidato == 3) {
+                votos3++;
+                document.getElementById("votos3").textContent = votos3;
+                console.log("Votó el Candidato 3");
+            }
+
+            if (votos1 == votos2 && votos2 == votos3) {
+                console.log("Hay un empate");
+            }
+            else if (votos1 >= votos2 && votos1 >= votos3) {
+                console.log("Va ganando el Candidato 1");
+            }
+            else if (votos2 >= votos1 && votos2 >= votos3) {
+                console.log("Va ganando el Candidato 2");
+            }
+            else {
+                console.log("Va ganando el Candidato 3");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
